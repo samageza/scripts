@@ -36,6 +36,21 @@ Setting temporary charge thresholds for BAT1:
   start = 40
 ```
 
+## SSD_life.sh
+
+Quick script to determine the expected lifespan (in years) for an SSD. Uses the purchase date (or a start date) and the expected total TB's that can be written to the drive to calculate the output.
+
+Update the script with the start date that you want and the expected TB for your SSD model. These can be estimated based on either burn tests or spec sheets. Basically, it just makes me feel better that the drive will outlast any equipment that I currently have. By a large margin. So I can stop worrying.
+
+```
+~# ./bin/ssd_life.sh
+Device Model:     Samsung SSD 850 EVO M.2 500GB
+Serial Number:    S23BNZAH210733X
+Current usage:    1727.61 GB
+Usage precentage: 1.12475 %
+Age:              265 days
+Lifespan:         64 yrs
+```
 
 ## To Do
 - [ ] Create desktop/UI integration to change the charge levels
