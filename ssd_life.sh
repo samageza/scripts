@@ -21,7 +21,7 @@ END=$(date +%s)
 DAYS_DIFF=$(((($(date +%s) - $(date --date=$PURCHASE_DATE +%s)))/(3600*24)))
 
 #output some information for reference.
-smartctl -a /dev/sda |head -n 8 |tail -n 4
+smartctl -a /dev/sda |head -n 6 |tail -n 2
 
 #output the lifespan
 awk -v used_gb="$USED_GB" -v days_diff="$DAYS_DIFF" -v expected_ssd_lifetime_writes_in_tb="$EXPECTED_SSD_LIFETIME_WRITES_IN_TB" 'BEGIN {
